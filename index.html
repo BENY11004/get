@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/output.css" />
+    </head>
+    <body>
+        <div class="flex min-h-screen items-center justify-center" id="animation">
+            <div class="loader" ></div>
+        </div>
+        <div class="min-h-screen flex flex-col items-center justify-center">
+            <div class="flex flex-col items-center lg:h-4/5 h-44 px-8 py-5 rounded-lg border" id="modal">
+                <span class="text-2xl font-semibold"> What do you need? </span>
+                <div class="flex gap-8 mt-8">
+                    <div>
+                        <input type="radio" name="radio" id="radiobutton" value="Hot" class="cursor-pointer" />
+                        <label for="radiobutton">Hot Coffe</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="radio" id="radio" value="Ice" class="cursor-pointer" />
+                        <label for="radio">Ice Coffe</label>
+                    </div>
+                </div>
+                <button type="submit" onclick="SelectTypeOfCoffe()" class="bg-white border rounded-2xl w-16 h-8 pb-1 mt-4 cursor-pointer hover:bg-green-400">Submit</button>
+            </div>
+            <div id="nav" class="flex lg:flex-row flex-col lg:items-center items-start my-8 px-12 w-full">
+                <span class="text-2xl font-semibold w-[400px]">Do you need to change?</span>
+                <div class="flex lg:justify-start w-full lg:gap-8 gap-2 lg:ml-12 lg:mt-0 mt-5">
+                    <div class="mr-4">
+                        <input type="radio" name="radio" id="radiobutton1"class="cursor-pointer" onclick="SelectTypeOfCoffeInPage()"/>
+                        <label for="radiobutton">Hot Coffe</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="radio" id="radio1"class="cursor-pointer" onclick="SelectTypeOfCoffeInPage()"/>
+                        <label for="radio">Ice Coffe</label>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[95%] min-h-screen flex-wrap hidden" id="box">
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
